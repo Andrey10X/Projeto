@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recuperação Tributária - Simule Agora</title>
+  <meta name="description" content="Recupere valores pagos indevidamente com nossa análise especializada. Simule agora gratuitamente!" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #007bff;
+      --primary-hover: #0056b3;
+      --bg: #f8f9fa;
+      --text: #212529;
+      --card-bg: #ffffff;
+      --radius: 8px;
+      --transition: 0.3s ease-in-out;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #f1f1f1;
+        --card-bg: #1e1e1e;
+        --primary: #3399ff;
+        --primary-hover: #1976d2;
+      }
+    }
+
+    * { 
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background var(--transition), color var(--transition);
+      background: linear-gradient(to bottom, #f9fafe 0%, #e3ecf9 100%);
+    }
+
+    header, footer {
+      background: var(--card-bg);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: background var(--transition);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .cta-button {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background var(--transition);
+      cursor: pointer;
+      background: #fff;
+      color: #007bff;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #007bff 0%, #3399ff 100%);
+      color: #fff;
+      padding: 5rem 2rem;
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent);
+      animation: pulse 6s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0.4; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .slider {
+      display: grid;
+      gap: 2rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 2rem 1rem;
+    }
+
+    .slide {
+      scroll-snap-align: center;
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+      background: #fff;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .slide.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide:hover {
+      transform: scale(1.01);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    figure {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform var(--transition);
+    }
+
+    figure:hover {
+      transform: scale(1.02);
+    }
+
+    figure img {
+      transition: transform 0.4s ease;
+    }
+
+    figure:hover img {
+      transform: scale(1.05);
+    }
+
+    figcaption {
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    form div {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      background: #fff;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="#form">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Recuperação Tributária Simples e Segura</h1>
+      <p>Descubra se você está pagando impostos a mais e recupere seu dinheiro legalmente!</p>
+      <a href="#form" class="cta-button">Simule Gratuitamente</a>
+      <img src="/images/hero.webp" alt="Profissional analisando documentos tributários" width="1200" height="400" loading="lazy">
+    </section>
+
+    <section aria-labelledby="slider-heading">
+      <h2 id="slider-heading" class="sr-only">Destaques</h2>
+      <div class="slider" role="region" aria-label="Carrossel de promoções">
+        <div class="slide">
+          <img src="https://picsum.photos/800/300?random=1" alt="Análise de duplicidade tributária" />
+          <h3>Dois Empregos, Dois Impostos?</h3>
+          <p>Verifique se você paga tributos em duplicidade.</p>
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/800/300?random=2" alt="Recuperação de tributos com segurança" />
+          <h3>Restituição Garantida</h3>
+          <p>Recupere valores dos últimos 5 anos com segurança.</p>
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/800/300?random=3" alt="Simulação gratuita de restituição" />
+          <h3>Análise Gratuita</h3>
+          <p>Simulação sem compromisso com especialistas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Nossos Serviços</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://picsum.photos/300/200?random=4" alt="Planejamento fiscal" />
+          <figcaption>Planejamento Fiscal</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/300/200?random=5" alt="Restituição Tributária" />
+          <figcaption>Restituição Tributária</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/300/200?random=6" alt="Consultoria INSS" />
+          <figcaption>Consultoria INSS</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Fale Conosco</h2>
+      <form id="form" action="/submit" method="POST">
+        <div>
+          <label for="name">Nome completo</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="cta-button">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Recuperação Tributária. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Intersection Observer para animar slides
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.slide').forEach(slide => {
+      observer.observe(slide);
+    });
+
+    // Validação personalizada do formulário
+    document.querySelector('form').addEventListener('submit', (e) => {
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+        e.preventDefault();
+        alert("Por favor, preencha todos os campos antes de enviar.");
+      }
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre Nós</title>
+  <style>
+    :root {
+      --primary: #007bff;
+      --primary-dark: #004466;
+      --accent: #008080;
+      --accent-dark: #006666;
+      --bg: #121212;
+      --card-bg: #23272b;
+      --text: #f1f1f1;
+      --muted: #b0b8c1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 24px 20px;
+      background: var(--primary-dark);
+      color: #fff;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    h1 {
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .equipe {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+
+    .equipe article {
+      flex: 1 1 250px;
+      background: #181b1f;
+      padding: 24px 16px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      border: 1px solid #23272b;
+    }
+
+    .equipe article:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      border-color: var(--primary);
+    }
+
+    .equipe img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      border: 3px solid var(--primary);
+      background: #23272b;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+      margin-bottom: 12px;
+      color: var(--text);
+      font-size: 1.08em;
+    }
+
+    ul li::before {
+      content: "✔️ ";
+      margin-right: 8px;
+      color: var(--accent);
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      transition: background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    .cta a:hover {
+      background: var(--accent-dark);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding: 20px 5px;
+      }
+      .equipe {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sobre Nós</h1>
+  <p style="color:var(--muted)">Inspirando ideias, conectando pessoas.</p>
+</header>
+
+<main>
+  <section>
+    <h2>Nossa Missão</h2>
+    <p>Transformar boas ideias em experiências inesquecíveis através da criatividade, tecnologia e conexão humana.</p>
+  </section>
+
+  <section>
+    <h2>Nossa História</h2>
+    <p>Tudo começou em uma cafeteria com Wi-Fi instável e sonhos grandes. Em 2019, lançamos nosso primeiro projeto, e desde então temos crescido com foco na inovação e no impacto positivo.</p>
+  </section>
+
+  <section>
+    <h2>Nossa Equipe</h2>
+    <div class="equipe">
+      <article>
+        <img src="https://via.placeholder.com/100/007bff/ffffff?text=J" alt="Foto de Joana">
+        <h3>Joana Ribeiro</h3>
+        <p>Fundadora & Diretora Criativa</p>
+      </article>
+      <article>
+        <img src="https://via.placeholder.com/100/007bff/ffffff?text=M" alt="Foto de Marcos">
+        <h3>Marcos Lima</h3>
+        <p>Desenvolvedor Full Stack</p>
+      </article>
+      <article>
+        <img src="https://via.placeholder.com/100/007bff/ffffff?text=C" alt="Foto de Carla">
+        <h3>Carla Mendes</h3>
+        <p>Marketing & Estratégia</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>O Que Nos Move</h2>
+    <ul>
+      <li>Compromisso com resultados reais</li>
+      <li>Inovação como cultura, não como modismo</li>
+      <li>Transparência em todas as relações</li>
+      <li>Paixão por resolver problemas difíceis</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <h3>Quer se conectar conosco?</h3>
+    <a href="contact.html">Fale com a gente</a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 SuaMarca. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

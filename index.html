@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Moderno Advocacia</title>
+    <meta name="description" content="
+Advocacia Moderna: excelência, ética e inovação em Direito. Consultoria jurídica, direito empresarial e defesa com galeria de imagens e contato.">
+<!--tag description define a descrição da pagina que você está desenvolvendo-->
+<!--Deve ser clara e objetiva e conter palavras chave importantes-->
+<!--tag description define a descrição da pagina que você está desenvolvendo-->
+<meta name="robots" content="index, follow">
+<!--
+  A tag acima instrui os mecanismos de busca (como Google, Bing, etc.) a indexar a página e seguir os links.
+-->
+<meta name="author" content="Andrey">
+<meta property="og:title" content="advocacia moderna">
+<meta property="og:description" content="advocacia moderna: excelência, ética e inovação em Direito. Consultoria jurídica, direito empresarial e defesa com galeria de imagens e contato.">
+<meta property="og:image" content="https://example.com/image.jpg">
+<meta property="og:url" content="https://example.com">
+
+<meta name keywords="advocacia, direito, consultoria jurídica, ética, inovação, defesa, serviços jurídicos">
+
+ 
+<meta name="twitter:image" content="summary_large_image"> content="Curso de Advocacia Moderna">
+<meta property="twitter:image" content="summary_large_image">
+<meta property="twitter:title" content="Advocacia Moderna">
+
+    <meta name="keywords" content="advocacia, direito, consultoria jurídica, ética, inovação, defesa, serviços jurídicos">
+    <meta name="theme-color" content="#0d6efd">
+
+    <!-- Bootstrap CSS e ícones -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #0d6efd 0%, #6ea8fe 100%);
+        }
+        .container {
+            margin-top: 40px;
+            background-color: #f8fafc;
+            color: #002147;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding-bottom: 40px;
+            max-width: 1200px;
+            border: 2px solid #00bcd4;
+        }
+        .site-header {
+            background: linear-gradient(90deg, #002147 60%, #0d6efd 100%);
+            color: #fff;
+            padding: 40px 0 28px 0;
+            border-radius: 18px 18px 0 0;
+            margin-bottom: 32px;
+            border: 2px solid #00bcd4;
+        }
+        .carousel-inner img {
+            object-fit: cover;
+            height: 320px;
+            border: 2px solid #00bcd4;
+        }
+        .carousel-inner {
+            border-radius: 18px;
+            border: 2px solid #00bcd4;
+        }
+        .feature-card {
+            min-height: 320px;
+            transition: transform 0.2s;
+            border: 2px solid #00bcd4;
+        }
+        .feature-card.bg-primary {
+            background: linear-gradient(135deg, #0d6efd 80%, #002147 100%);
+        }
+        .feature-card.bg-info {
+            background: linear-gradient(135deg, #6ea8fe 80%, #00bcd4 100%);
+        }
+        .feature-card.bg-gradient {
+            background: linear-gradient(135deg, #002147 80%, #0a1931 100%);
+        }
+        .feature-card.bg-ethics {
+            background: linear-gradient(135deg, #002147 80%, #23395d 100%);
+            border: 2px solid #23395d;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(13,110,253,0.10);
+        }
+        .gallery-img {
+            object-fit: cover;
+            height: 180px;
+            width: 100%;
+            border: 2px solid #00bcd4;
+        }
+        footer {
+            border-top: 2px solid #00bcd4 !important;
+        }
+        @media (max-width: 767px) {
+            .carousel-inner img {
+                height: 180px;
+            }
+            .feature-card {
+                min-height: 220px;
+            }
+            .gallery-img {
+                height: 120px;
+            }
+        }
+        .navbar-nav .nav-link.text-black {
+            color: #212529 !important; /* Preto real para contraste */
+        }
+        .navbar-brand.text-info {
+            color: #00bcd4 !important;
+            text-shadow: 0 1px 2px #222; /* melhora contraste em fundo escuro */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar moderna fixa no topo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-info" href="#">Advocacia Moderna</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link text-black" href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="#galeria">Galeria</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container px-0 px-md-4" style="margin-top: 90px;">
+        <header class="site-header text-center shadow-sm">
+            <h1 class="display-4 fw-bold mb-2">Advocacia Moderna</h1>
+            <p class="lead mb-0">Excelência, ética e inovação em Direito</p>
+        </header>
+
+        <!-- Slides/Carousel -->
+        <section id="slides" aria-label="Slides institucionais">
+            <div id="carouselExampleIndicators" class="carousel slide mb-5 shadow-sm" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded-4">
+                    <div class="carousel-item active">
+                        <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jxk5ddvte2fv9h5qqqbqtkw1%2F1749768723_img_3.webp?st=2025-06-12T21%3A36%3A38Z&se=2025-06-18T22%3A36%3A38Z&sks=b&skt=2025-06-12T21%3A36%3A38Z&ske=2025-06-18T22%3A36%3A38Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=fLFNfYN0%2B%2FnEdYI%2FLf%2BUi4D%2BpaiRBMiNexy2%2FYuk0TU%3D&az=oaivgprodscus"
+                             class="d-block w-100"
+                             alt="Equipe de advogados reunidos em escritório moderno, discutindo estratégias jurídicas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+                             class="d-block w-100"
+                             alt="Águia em voo representando visão estratégica no direito">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80"
+                             class="d-block w-100"
+                             alt="Vista aérea de tribunal moderno representando justiça e ética">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" aria-label="Slide anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" aria-label="Próximo slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Features/Colunas -->
+        <main>
+            <section id="servicos" aria-label="Serviços jurídicos">
+                <div id="features" class="row g-4 mb-5">
+                    <div class="col-12 col-md-4">
+                        <div class="feature-card bg-primary text-white text-center p-4 rounded-4 h-100 shadow-sm">
+                            <h2 id="consultoria" class="mb-3">Consultoria Jurídica</h2>
+                            <p class="lead">Atendimento personalizado para pessoas e empresas.</p>
+                            <button class="btn btn-outline-light btn-lg fw-semibold mt-2"
+                                    type="button"
+                                    aria-label="Fale Conosco sobre Consultoria Jurídica">
+                                <i class="bi bi-chat-dots"></i> <span style="color:#fff;">Fale Conosco</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="feature-card bg-info text-white text-center p-4 rounded-4 h-100 shadow-sm">
+                            <h2 class="mb-3">Direito Empresarial</h2>
+                            <p class="fs-5 mx-auto">Soluções inovadoras para o seu negócio.</p>
+                            <button class="btn btn-outline-primary btn-lg fw-semibold mt-2"
+                                    type="button"
+                                    aria-label="Saiba mais sobre Direito Empresarial">
+                                <i class="bi bi-briefcase"></i> <span style="color:#002147;">Saiba mais</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="feature-card bg-ethics text-white text-center p-4 rounded-4 h-100 shadow-sm">
+                            <h2 class="mb-3">Defesa e Ética</h2>
+                            <p class="fs-5 mx-auto">Compromisso com a justiça e integridade.</p>
+                            <button class="btn btn-outline-light btn-lg fw-semibold mt-2"
+                                    type="button"
+                                    aria-label="Compre Agora - Defesa e Ética">
+                                <i class="bi bi-shield-lock"></i> <span style="color:#fff;">Compre Agora</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Galeria de Imagens -->
+        <section id="galeria" aria-label="Galeria de imagens do escritório">
+            <div class="row g-3 mb-5">
+                <div class="col-12">
+                    <h3 class="mb-4 text-center fw-semibold">Galeria de Imagens</h3>
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+                         class="gallery-img rounded-3 shadow-sm"
+                         alt="Advogada em reunião jurídica em escritório moderno"
+                         loading="lazy">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+                         class="gallery-img rounded-3 shadow-sm"
+                         alt="Estátua da justiça segurando balança, símbolo do direito"
+                         loading="lazy">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                         class="gallery-img rounded-3 shadow-sm"
+                         alt="Águia pousada representando visão e estratégia jurídica"
+                         loading="lazy">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+                         class="gallery-img rounded-3 shadow-sm"
+                         alt="Vista aérea de tribunal moderno representando justiça"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <footer id="contato" class="text-center pt-4 border-top">
+            <p class="mb-0" style="color:#002147;">&copy; 2025 Advocacia Moderna. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Ícone no canto superior esquerdo -->
+    <div style="position: fixed; top: 16px; left: 16px; z-index: 1050;">
+      <i class="bi bi-chevron-contract" style="font-size: 2rem; color: #adb5bd;" aria-label="Ícone decorativo canto superior esquerdo"></i>
+    </div>
+
+    <!-- Ícone no canto inferior direito -->
+    <div style="position: fixed; bottom: 16px; right: 16px; z-index: 1050;">
+      <i class="bi bi-chevron-contract" style="font-size: 2rem; color: #adb5bd;" aria-label="Ícone decorativo canto inferior direito"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

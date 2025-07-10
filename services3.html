@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | GamerHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00bcd4;
+            --secondary: #181a1b;
+            --accent: #ff0059;
+            --bg-dark: #121212;
+            --text-light: #f1f1f1;
+            --card-bg: #23272a;
+        }
+        body {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Roboto', Arial, sans-serif;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: var(--secondary) !important;
+            border-bottom: 2px solid var(--primary);
+        }
+        .navbar-brand {
+            font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+            font-size: 2rem;
+            color: var(--primary) !important;
+            letter-spacing: 2px;
+        }
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent) !important;
+        }
+        .services-hero {
+            background: linear-gradient(135deg, #23272a 60%, #00bcd4 100%);
+            padding: 80px 0 40px 0;
+            text-align: center;
+            border-radius: 0 0 32px 32px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            margin-bottom: 48px;
+            animation: fadeInHero 1.2s ease;
+        }
+        @keyframes fadeInHero {
+            from { opacity: 0; transform: translateY(-40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .services-title {
+            font-family: 'Orbitron', Arial, sans-serif;
+            font-size: 2.6rem;
+            color: var(--primary);
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            animation: slideDown 1s cubic-bezier(.77,0,.18,1) 0.2s both;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .services-desc {
+            font-size: 1.2rem;
+            color: #b0b8c1;
+            margin-bottom: 32px;
+            animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.5s both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        .section-title {
+            color: var(--primary);
+            font-family: 'Orbitron', Arial, sans-serif;
+            font-size: 2rem;
+            margin: 48px 0 24px 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .card {
+            background: var(--card-bg);
+            color: var(--text-light);
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+            transition: transform 0.25s cubic-bezier(.77,0,.18,1), box-shadow 0.25s cubic-bezier(.77,0,.18,1);
+            will-change: transform;
+        }
+        .card:hover, .card:focus-within {
+            transform: scale(1.05) rotate(-1deg);
+            box-shadow: 0 8px 32px rgba(0,188,212,0.22);
+            z-index: 2;
+        }
+        .card-title {
+            color: var(--primary);
+            font-family: 'Orbitron', Arial, sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .card-text {
+            color: #b0b8c1;
+        }
+        .footer {
+            background: var(--secondary);
+            color: #b0b8c1;
+            text-align: center;
+            padding: 32px 0 16px 0;
+            margin-top: 48px;
+            border-top: 2px solid var(--primary);
+        }
+        @media (max-width: 600px) {
+            .services-title { font-size: 1.6rem; }
+            .section-title { font-size: 1.3rem; }
+            .services-hero { padding: 48px 0 24px 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index3.html">GamerHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index3.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Comunidade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Serviços -->
+    <section class="services-hero">
+        <div class="container">
+            <h1 class="services-title">Nossos Serviços</h1>
+            <p class="services-desc">
+                Soluções completas para gamers: suporte técnico, eventos, dicas e comunidade ativa.<br>
+                Tudo com a identidade visual e experiência que só o GamerHub oferece.
+            </p>
+        </div>
+    </section>
+
+    <!-- Cards de Serviços -->
+    <main class="container">
+        <h2 class="section-title">O que oferecemos</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-md-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Suporte Técnico Gamer</h5>
+                        <p class="card-text">Diagnóstico, manutenção e otimização de PCs, consoles e periféricos para máxima performance e estabilidade.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Comunidade & Eventos</h5>
+                        <p class="card-text">Participe de campeonatos, sorteios, lives, fóruns e grupos exclusivos para membros do GamerHub.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Conteúdo & Dicas</h5>
+                        <p class="card-text">Acesse reviews, tutoriais, notícias, dicas de hardware e estratégias para evoluir no universo gamer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 GamerHub. Todos os direitos reservados.</p>
+            <small>Feito por gamers, para gamers.</small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
