@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GamerHub – Sua Comunidade Gamer</title>
+    <title>MultiMarket – Sua Plataforma de Vendas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #00bcd4;
             --secondary: #181a1b;
-            --accent: #ff0059;
+            --accent: #ff9800;
             --bg-dark: #121212;
             --text-light: #f1f1f1;
             --card-bg: #23272a;
@@ -89,9 +89,9 @@
             animation: popIn 1s cubic-bezier(.77,0,.18,1) 0.8s both;
         }
         .cta-btn:hover, .cta-btn:focus {
-            background: #ff3377;
+            background: #ffb74d;
             transform: translateY(-4px) scale(1.06) rotate(-2deg);
-            box-shadow: 0 6px 24px rgba(255,0,89,0.18);
+            box-shadow: 0 6px 24px rgba(255,152,0,0.18);
         }
         @keyframes popIn {
             from { opacity: 0; transform: scale(0.8);}
@@ -136,13 +136,13 @@
             border-top: 2px solid var(--primary);
         }
         /* Aumenta o banner do carrossel */
-        #gamerSlides .carousel-inner,
-        #gamerSlides .carousel-item,
-        #gamerSlides img {
+        #marketSlides .carousel-inner,
+        #marketSlides .carousel-item,
+        #marketSlides img {
             height: 750px;
             max-height: 750px !important;
         }
-        #gamerSlides img {
+        #marketSlides img {
             object-fit: cover;
             width: 100%;
         }
@@ -151,9 +151,9 @@
             .hero-title { font-size: 2rem; }
             .section-title { font-size: 1.3rem; }
             .hero { padding: 56px 0 24px 0; }
-            #gamerSlides .carousel-inner,
-            #gamerSlides .carousel-item,
-            #gamerSlides img {
+            #marketSlides .carousel-inner,
+            #marketSlides .carousel-item,
+            #marketSlides img {
                 height: 220px;
                 max-height: 220px;
             }
@@ -164,16 +164,17 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">GamerHub</a>
+            <a class="navbar-brand" href="#">MultiMarket</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Comunidade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Vendedores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Minha Conta</a></li>
                 </ul>
             </div>
         </div>
@@ -182,64 +183,69 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Bem-vindo ao GamerHub</h1>
+            <h1 class="hero-title">Bem-vindo ao MultiMarket</h1>
             <p class="hero-desc">
-                A comunidade definitiva para gamers: notícias, dicas, suporte técnico e eventos exclusivos.<br>
-                Junte-se a milhares de jogadores e eleve sua experiência!
+                A plataforma completa para você comprar e vender produtos de diversos segmentos.<br>
+                Cadastre-se, anuncie e alcance milhares de clientes!
             </p>
-            <a href="#" class="cta-btn">Entrar na Comunidade</a>
+            <a href="#" class="cta-btn">Quero Vender</a>
+            <a href="#" class="cta-btn ms-3" style="background:var(--primary);">Quero Comprar</a>
         </div>
     </section>
 
-    <!-- Slider Section - Destaques Gamer -->
+    <!-- Slider Section - Destaques -->
     <section class="container my-5">
-      <div id="gamerSlides" class="carousel slide rounded-4 overflow-hidden shadow-lg" data-bs-ride="carousel" aria-label="Destaques Gamer">
+      <div id="marketSlides" class="carousel slide rounded-4 overflow-hidden shadow-lg" data-bs-ride="carousel" aria-label="Destaques MultiMarket">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/img/assets_task_01jzp1391bfh5tf1wvafyws12m_1752012343_img_1.webp" class="d-block w-100" alt="Setup gamer com teclado, mouse, headset e microfone RGB" style="object-fit:cover;max-height:400px;">
+            <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b1a48?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Produtos eletrônicos em destaque" style="object-fit:cover;max-height:400px;">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/assets_task_01jy05gdjveeztfhyvrv8vp96z_1750205035_img_1.webp" class="d-block w-100" alt="Setup gamer com luzes neon" style="object-fit:cover;max-height:400px;">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Moda e acessórios" style="object-fit:cover;max-height:400px;">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Casa e decoração" style="object-fit:cover;max-height:400px;">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#gamerSlides" data-bs-slide="prev" aria-label="Slide anterior">
+        <button class="carousel-control-prev" type="button" data-bs-target="#marketSlides" data-bs-slide="prev" aria-label="Slide anterior">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#gamerSlides" data-bs-slide="next" aria-label="Próximo slide">
+        <button class="carousel-control-next" type="button" data-bs-target="#marketSlides" data-bs-slide="next" aria-label="Próximo slide">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#gamerSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#gamerSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#marketSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#marketSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#marketSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
       </div>
     </section>
 
     <!-- Serviços -->
     <main class="container">
-        <h2 class="section-title">Nossos Serviços</h2>
+        <h2 class="section-title">Como Funciona</h2>
         <div class="row g-4 mb-5">
             <div class="col-12 col-md-4">
                 <div class="card h-100 text-center p-4">
                     <div class="card-body">
-                        <h5 class="card-title">Suporte Técnico Gamer</h5>
-                        <p class="card-text">Diagnóstico e solução de problemas em PCs, consoles e periféricos para máxima performance.</p>
+                        <h5 class="card-title">Venda Fácil</h5>
+                        <p class="card-text">Cadastre seus produtos, defina preços e comece a vender para todo o Brasil em poucos minutos.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="card h-100 text-center p-4">
                     <div class="card-body">
-                        <h5 class="card-title">Comunidade & Eventos</h5>
-                        <p class="card-text">Participe de campeonatos, sorteios, lives e fóruns exclusivos para membros.</p>
+                        <h5 class="card-title">Compre com Segurança</h5>
+                        <p class="card-text">Encontre produtos de diversos vendedores, com avaliações e garantia de entrega.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="card h-100 text-center p-4">
                     <div class="card-body">
-                        <h5 class="card-title">Conteúdo & Dicas</h5>
-                        <p class="card-text">Acesse reviews, tutoriais, notícias e dicas para evoluir no mundo gamer.</p>
+                        <h5 class="card-title">Gestão de Vendas</h5>
+                        <p class="card-text">Acompanhe pedidos, estoque e pagamentos em um painel simples e intuitivo.</p>
                     </div>
                 </div>
             </div>
@@ -247,26 +253,26 @@
     </main>
 
     <!-- DEPOIMENTOS -->
-    <section class="container mb-5" id="depoimentos" aria-label="Depoimentos de gamers">
-      <h2 class="section-title">O que dizem nossos membros</h2>
+    <section class="container mb-5" id="depoimentos" aria-label="Depoimentos de vendedores e compradores">
+      <h2 class="section-title">O que dizem nossos usuários</h2>
       <div class="row g-4">
         <div class="col-12 col-md-4">
           <div class="card h-100 text-center p-4">
             <div class="card-body">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Depoimento de Lucas" class="rounded-circle mb-3 mx-auto d-block" style="width:70px;height:70px;object-fit:cover;border:3px solid var(--primary);">
-              <h5 class="card-title mb-1">Lucas Gamer</h5>
-              <p class="card-text small mb-2" style="color:#b0b8c1;">Streamer & Competidor</p>
-              <p class="card-text">"O suporte técnico resolveu meu problema em minutos. Recomendo para todo gamer!"</p>
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Depoimento de João" class="rounded-circle mb-3 mx-auto d-block" style="width:70px;height:70px;object-fit:cover;border:3px solid var(--primary);">
+              <h5 class="card-title mb-1">João Silva</h5>
+              <p class="card-text small mb-2" style="color:#b0b8c1;">Vendedor</p>
+              <p class="card-text">"Vendi meus produtos rapidamente e o suporte foi excelente. Recomendo a MultiMarket!"</p>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4">
           <div class="card h-100 text-center p-4">
             <div class="card-body">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Depoimento de Ana" class="rounded-circle mb-3 mx-auto d-block" style="width:70px;height:70px;object-fit:cover;border:3px solid var(--primary);">
-              <h5 class="card-title mb-1">Ana XP</h5>
-              <p class="card-text small mb-2" style="color:#b0b8c1;">Pro Player</p>
-              <p class="card-text">"A comunidade é super ativa e os eventos são incríveis. Me sinto em casa no GamerHub."</p>
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Depoimento de Maria" class="rounded-circle mb-3 mx-auto d-block" style="width:70px;height:70px;object-fit:cover;border:3px solid var(--primary);">
+              <h5 class="card-title mb-1">Maria Souza</h5>
+              <p class="card-text small mb-2" style="color:#b0b8c1;">Compradora</p>
+              <p class="card-text">"Encontrei ótimos preços e recebi tudo certinho. Plataforma fácil de usar!"</p>
             </div>
           </div>
         </div>
@@ -274,9 +280,9 @@
           <div class="card h-100 text-center p-4">
             <div class="card-body">
               <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Depoimento de Rafael" class="rounded-circle mb-3 mx-auto d-block" style="width:70px;height:70px;object-fit:cover;border:3px solid var(--primary);">
-              <h5 class="card-title mb-1">Rafael Tech</h5>
-              <p class="card-text small mb-2" style="color:#b0b8c1;">Entusiasta</p>
-              <p class="card-text">"Aprendi muito com os tutoriais e dicas. Meu desempenho nos jogos melhorou muito!"</p>
+              <h5 class="card-title mb-1">Rafael Lima</h5>
+              <p class="card-text small mb-2" style="color:#b0b8c1;">Vendedor</p>
+              <p class="card-text">"A gestão de vendas é prática e me ajudou a crescer meu negócio online."</p>
             </div>
           </div>
         </div>
@@ -286,13 +292,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="mb-1">&copy; 2025 GamerHub. Todos os direitos reservados.</p>
-            <small>Feito por gamers, para gamers. Siga-nos nas redes sociais!</small>
+            <p class="mb-1">&copy; 2025 MultiMarket. Todos os direitos reservados.</p>
+            <small>Conectando vendedores e compradores de todo o Brasil!</small>
         </div>
     </footer>
-
-
-
-</html></body>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
